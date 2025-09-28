@@ -1,0 +1,23 @@
+# start
+    #input salary and dependents 
+    
+salary = float(input())
+num_dependents = float(input())
+
+    # formulas
+    
+state_tax = salary * 0.065
+federal_tax = salary * 0.28
+dependent_deductions = (salary * 0.025) * num_dependents
+total_withholding = state_tax + federal_tax + dependent_deductions
+take_home_pay = salary - total_withholding
+
+    # print calculations 
+    
+print("State Tax: $" + str(state_tax))
+print("Federal Tax: $" + str(federal_tax))
+print("Dependents: $" + str(dependent_deductions))
+print("Salary: $" + str(salary))
+print("Take Home Pay: $" + str(take_home_pay))
+
+# stop
