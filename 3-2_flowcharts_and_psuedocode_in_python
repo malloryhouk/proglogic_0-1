@@ -1,0 +1,25 @@
+test_score_string = input ("Please input your test score: ")
+class_rank_string = input ("Please input your class rank: ")
+
+test_score = int (test_score_string)
+class_rank = int (class_rank_string)
+
+if test_score >= 90:
+  if class_rank >= 25:
+    print("Accept")
+  else:
+    print("Reject")
+else:
+  if test_score >= 80:
+    if class_rank >= 50:
+      print("Accept")
+    else:
+      print("Reject")
+  else:
+    if test_score >= 70:
+      if class_rank >= 75:
+        print("Accept")
+      else:
+        print("Reject")
+    else:
+      print("Reject")
