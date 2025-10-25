@@ -1,0 +1,31 @@
+"""
+This program calculates prices for custom house signs.
+"""
+
+# Declare and initialize variables here.
+# Number of characters.
+Num_Char = input("How many characters does your sign need? ")
+# Color of characters.
+Colour = input("What colour would you like the characters to be? ")
+# Type of wood.
+Wood_Type = input("What type of wood would you like? ")
+
+# Write assignment and if statements here as appropriate.
+if Colour == str("gold"):
+    Colour = 15 
+elif Colour == str("black"):
+    Colour = 0
+else:
+    print("Unavailable colour, please make a different selection or make sure your original was spelled correctly")
+
+if Wood_Type == str("oak"):
+    Wood_Type = 35
+elif Wood_Type == str("pine"):
+    Wood_Type = 15
+else: 
+    print("Unavailable wood type, please make a different selection of make sure your original was spelled correctly.")
+
+Charge = int(Num_Char) * 4 + int(Colour) + int(Wood_Type)
+
+# Output Charge for this sign.
+print("The charge for this sign is $" + str(Charge))
