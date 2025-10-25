@@ -1,0 +1,21 @@
+# start
+    # input employee name, number of shifts, number of transactions, transaction value
+Employee_Name = input("Name: ")
+Shift_Num = input("Number of shifts worked: ")
+Trans_Num = input("Number of transactions completed: ")
+Trans_Val = input("Dollar value of transactions completed: ")
+
+    # if statements for bonus calculation
+if int(Trans_Val) / int(Trans_Num) / int(Shift_Num) <=30:
+    Bonus = "$50.00"
+elif int(Trans_Val) / int(Trans_Num) / int(Shift_Num) < 70:
+    Bonus = "$75.00"
+elif int(Trans_Val) / int(Trans_Num) / int(Shift_Num) < 200:
+    Bonus = "$100.00"
+elif int(Trans_Val) / int(Trans_Num) / int(Shift_Num) >=200:
+    Bonus = "$200.00"
+    
+    # output employee name and bonus
+print("Employee Name: " + (Employee_Name))
+print("Employee Bonus: " + (Bonus))
+# end
