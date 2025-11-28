@@ -5,6 +5,7 @@ def Ex_Create():
 	Price = float(input ("Amount spent: $"))
 	Expenses.append ({Purchase, Price})
 	print ("Expense added: " + Purchase + " for $" + str(Price))
+	Play_Menu()
 	
 def Ex_View_Cur():
 	if not Expenses:
@@ -12,6 +13,7 @@ def Ex_View_Cur():
 		return
 	for x in Expenses:
 		print (f"{x[Purchase]}: ${x[Price]}")
+	Play_Menu()
 
 def Ex_View_All():
 	if not Expenses:
@@ -20,23 +22,27 @@ def Ex_View_All():
 	for x in Expenses:
 		print (f"{x[Purchase]}: ${x[Price]}")
 		print (f"Total spent: ${sum(x)[Price] for x in Expenses}")
+	Play_Menu()
 
 def Ex_Delete():
 	Expenses.clear()
 	print ("Expenses cleared.")
+	Play_Menu ()
+	
+def Play_Menu():
+    print ("Expense Tracker Menu")
+    print ("1.   Enter 1 to create a new expense.")
+    print ("2.   Enter 2 to view current expenses.")
+    print ("3.   Enter 3 to view all expenses and cumulative amount spent.")
+    print ("4.   Enter 4 to clear expenses.")
+    print ("5.   Enter 5 to quit.")
+    Opt_Select = input ("Please select a function via its corresponding number: ")
+    if Opt_Select == "1": Ex_Create()
+    elif Opt_Select == "2": Ex_View_Curr()
+    elif Opt_Select == "3": Ex_View_All()
+    elif Opt_Select == "4": Ex_Delete()
+    elif Opt_Select == "5": 
+    	print ("Session ended.")
+    else: print ("Invalid input. Please input 1, 2, 3, 4, or 5.")
 
-print ("Expense Tracker Menu")
-print ("1.   Enter 1 to create a new expense.")
-print ("2.   Enter 2 to view current expenses.")
-print ("3.   Enter 3 to view all expenses and cumulative amount spent.")
-print ("4.   Enter 4 to clear expenses.")
-print ("5.   Enter 5 to quit.")
-Opt_Select = input ("Please select a function via its corresponding number: ")
-
-if Opt_Select == "1": Ex_Create()
-elif Opt_Select == "2": Ex_View_Curr()
-elif Opt_Select == "3": Ex_View_All()
-elif Opt_Select == "4": Ex_Delete()
-elif Opt_Select == "5": 
-	print ("Session ended.")
-else: print ("Invalid input. Please input 1, 2, 3, 4, or 5.")
+Play_Menu()
